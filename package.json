@@ -21,6 +21,7 @@
     "@types/react-router-dom": "^5.3.3",
     "dotenv-webpack": "^8.0.0",
     "fs": "^0.0.1-security",
+    "magic-sdk": "^8.1.1",
     "moralis": "^1.9.0",
     "msw": "^0.44.1",
     "prettier": "^2.7.1",

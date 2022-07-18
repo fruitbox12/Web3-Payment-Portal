@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <React.Suspense fallback="">
-      <App data={'lol'} />
+      <App />
     </React.Suspense>
   </React.StrictMode>,
 );

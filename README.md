@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# Keyrxng's Web3 Payment Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stacks Used:
 
-## Available Scripts
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+    rel="noreferrer"> <img
+      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+      alt="javascript" width="60" height="60" />
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+    rel="noreferrer"> <img
+      src="https://yt3.ggpht.com/ARn8KaUkI7-dVrO0YZEAVJDCfN9bhaLHExWf5nx98oildBZC_CDwqs_Qj7_thPnx1eY2DZG42A=s88-c-k-c0x00ffffff-no-rj"
+      alt="javascript" width="60" height="60" />
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+    rel="noreferrer"> <img
+      src="https://icon-library.com/images/react-icon/react-icon-29.jpg"
+      alt="javascript" width="60" height="60" />
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+    rel="noreferrer"> <img
+      src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
+      alt="javascript" width="60" height="60" />
+</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+    rel="noreferrer"> <img
+      src="https://avatars.githubusercontent.com/u/70477508?s=200&v=4"
+      alt="javascript" width="60" height="60" />
+</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+    rel="noreferrer"> <img
+      src="https://avatars.githubusercontent.com/u/68716856?s=200&v=4"
+      alt="javascript" width="60" height="60" />
+</a>
 
-In the project directory, you can run:
+<br/>
 
-### `npm start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## What to change:
 
-### `npm test`
+    /.env.example => /.env
+    Input appropriate keys
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    /Payments/payments
+    const Pay = () => {...
+    ... accept: [] <---- enter your own address and your accepted token addresses
 
-### `npm run build`
+    /Payments/Onramp
+    const allowedTokens = {} <---- enter your own accepted tokens using the token symbol
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    yarn install
+    yarn start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## TODOs
 
-### `npm run eject`
+### # 0. Handling payment tracking via onramper
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### # 1. Handling transaction response from Depay
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### # 3. Handle donations info display i.e total to date, biggest donation, repeat donators
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### # 4. Include a more comprehensive list of available donation routes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Limitations
 
-## Learn More
+### # 1. Onramper allows the purchasing of any token with a liquidity pair while Depay is has preset tokens
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### # 2. Spoofing the Onramper api is possible for purchase response but without a depay having testnet access it's harder to spoof the blockchain response
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tidbit
+
+### This was a pet project to learn some typescript as well as build a small scale contained dApp which if you ask me I've succeeded on one half while the typescipt written is a disaster but it's a work in progress.
