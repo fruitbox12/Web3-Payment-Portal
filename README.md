@@ -63,6 +63,8 @@
 
 ### # 4. Include a more comprehensive list of available donation routes
 
+### # 5. Tutorialize things more for non web3 educated visitors i.e detect metamask, offer install if not, be more granular with 'How to use:' component and display it more effectively
+
 ## Limitations
 
 ### # 1. Onramper allows the purchasing of any token with a liquidity pair while Depay is has preset tokens

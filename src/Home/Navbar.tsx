@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import KLogo from '../img/Klogo.png'
 import { ConnectButton } from 'web3uikit';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -14,10 +15,10 @@ const Navbar = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          <a href='https://www.keyrxng.xyz'>
+          <Link to='https://www.keyrxng.xyz'>
             <img
               src={KLogo} alt={'Keyrxng logo'} sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} style={{ width: '30px', height: '30px' }} />
-          </a>
+          </Link>
 
           <Typography
             variant="h6"
