@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {FC} from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { MoralisProvider } from 'react-moralis'
+import Home from './Home/Home'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+interface Data {
+  info: string
 }
 
-export default App;
+const server: string = process.env.REACT_APP_SERVER_URL ?? ''
+const id: string = process.env.REACT_APP_APPID ?? ''
+
+export const App: FC<Data> = (data) => {
+
+  return (
+    <React.StrictMode>
+      <MoralisProvider
+        appId={id}
+        serverUrl={server}
+      >
+        <BrowserRouter>
+          <Home data={data.info}/>
+        </BrowserRouter>
+      </MoralisProvider>
+    </React.StrictMode>
+  )
+}
